@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import ApiConnection from "../Core/countries/ApiConnection";
 
 const apiConnection = new ApiConnection();
-const countriDetails = apiConnection.getCountries();
 
 function ListOfCountries({ setCountryDetails }) {
     const [countries, setCountries] = useState([]);
@@ -18,7 +17,7 @@ function ListOfCountries({ setCountryDetails }) {
     }, []);
 
     const seeDetails = (id) => {
-        setCountryDetails(countriDetails[id]);
+        setCountryDetails(apiConnection.getCountries()[id]);
     }
 
     return (
