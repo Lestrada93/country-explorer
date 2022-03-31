@@ -20,13 +20,7 @@ function History({ seeDetails, countryDetails }) {
 
             setCountriesHistory(countries);
         }
-    }, [countryDetails])
-
-    useEffect(() => {
-        console.info("countriesHistory", countriesHistory);
-        console.info("Object.values(countriesHistory)",
-            Object.values(countriesHistory).sort((a, b) => a.name.localeCompare(b.name)));
-    }, [countriesHistory])
+    }, [countryDetails]);
 
     const getList = () => {
         return Object.values(countriesHistory).sort((a, b) => a.name.localeCompare(b.name));
