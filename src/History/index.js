@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-function History({ countryDetails }) {
+function History({ seeDetails, countryDetails }) {
     const [countriesHistory, setCountriesHistory] = useState({});
 
     useEffect(() => {
@@ -31,12 +31,7 @@ function History({ countryDetails }) {
             <h1>History</h1>
             {
                 Object.values(countriesHistory).map(country => {
-                    return (
-                        <>
-                            <span>{country.name}</span>
-                            <span>{country.counter}</span>
-                        </>
-                    )
+                    return <button onClick={() => seeDetails(country.id)}>{country.name} {country.counter}</button>
                 })
             }
         </div>

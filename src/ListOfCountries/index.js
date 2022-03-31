@@ -1,24 +1,6 @@
-import React, { useEffect, useState } from "react";
-import ApiConnection from "../Core/countries/ApiConnection";
+import React from "react";
 
-const apiConnection = new ApiConnection();
-
-function ListOfCountries({ setCountryDetails }) {
-    const [countries, setCountries] = useState([]);
-
-    async function fetchCountries() {
-        const response = await apiConnection.fetchingCountries();
-        console.info("response >>", response);
-        setCountries(response);
-    }
-
-    useEffect(() => {
-        fetchCountries();
-    }, []);
-
-    const seeDetails = (id) => {
-        setCountryDetails(apiConnection.getCountries()[id]);
-    }
+function ListOfCountries({ countries, seeDetails }) {
 
     return (
         <div>
