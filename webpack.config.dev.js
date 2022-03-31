@@ -14,15 +14,6 @@ module.exports = {
         publicPath: "/",
         filename: "bundle.js"
     },
-    devServer: {
-        stats: "minimal",
-        overlay: true,
-        historyApiFallback: true,
-        disableHostCheck: true,
-        headers: { "Access-Control-Allow-Origin": "*" },
-        https: false,
-        host: "0.0.0.0"
-    },
     plugins: [
         new HtmlWebpackPlugin({
             template: "public/index.html",
@@ -37,17 +28,10 @@ module.exports = {
                 use: ["babel-loader", "eslint-loader"]
             },
             {
-                test: /(\.css)$/,
-                use: ["style-loader", "css-loader"]
-            },
-            {
                 test: /\.s[ac]ss$/i,
                 use: [
-                    // Creates `style` nodes from JS strings
                     "style-loader",
-                    // Translates CSS into CommonJS
                     "css-loader",
-                    // Compiles Sass to CSS
                     "sass-loader",
                 ],
             },
