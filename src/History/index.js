@@ -24,14 +24,20 @@ function History({ seeDetails, countryDetails }) {
 
     useEffect(() => {
         console.info("countriesHistory", countriesHistory);
+        console.info("Object.values(countriesHistory)",
+            Object.values(countriesHistory).sort((a, b) => a.name.localeCompare(b.name)));
     }, [countriesHistory])
+
+    const getList = () => {
+        return Object.values(countriesHistory).sort((a, b) => a.name.localeCompare(b.name));
+    }
 
     return (
         <div>
             <h1>History</h1>
             {
-                Object.values(countriesHistory).map(country => {
-                    return <button onClick={() => seeDetails(country.id)}>{country.name} {country.counter}</button>
+                getList().map(country => {
+                    return <button key={country.id} onClick={() => seeDetails(country.id)}>{country.name} {country.counter}</button>
                 })
             }
         </div>

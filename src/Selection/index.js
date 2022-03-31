@@ -1,24 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 function Selection({ countryDetails }) {
+    const [details, setDetails] = useState({});
+    useEffect(() => {
+        if (countryDetails?.id) {
+            setDetails(countryDetails);
+        }
+    }, [countryDetails])
+
     return (
         <div>
             <h1>Selection</h1>
             <p>
                 <strong>Name:</strong>
-                {countryDetails.name}
+                {details.name}
             </p>
             <p>
                 <strong>Dial code:</strong>
-                {countryDetails.dialCode}
+                {details.dialCode}
             </p>
             <p>
                 <strong>Continent:</strong>
-                {countryDetails.continent}
+                {details.continent}
             </p>
             <p>
                 <strong>Currency code:</strong>
-                {countryDetails.currencyCode}
+                {details.currencyCode}
             </p>
         </div>
     );
