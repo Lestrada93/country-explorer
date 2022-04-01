@@ -37,14 +37,16 @@ function History({ t, seeDetails, countryDetails }) {
 
     return (
         <div>
-            <h1>History</h1>
-            {
-                Object.values(countriesHistory).length ? (
-                    getList().map(country => {
-                        return <Country key={country.id} data={country} seeDetails={seeDetails} />
-                    })
-                ) : <h3>{t('MUST_COUNTRY_HISTORY')}</h3>
-            }
+            <h2 className="panel__column__title">History</h2>
+            <div className="panel__content">
+                {
+                    Object.values(countriesHistory).length ? (
+                        getList().map(country => {
+                            return <Country key={country.id} data={country} seeDetails={seeDetails} />
+                        })
+                    ) : <p>{t('MUST_COUNTRY_HISTORY')}</p>
+                }
+            </div>
         </div>
     );
 }

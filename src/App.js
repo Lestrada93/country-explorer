@@ -25,8 +25,8 @@ function App() {
         setCountryDetails(apiConnection.getCountries()[id]);
     }
 
-    return <div>
-        <h1>Country Explorer</h1>
+    return <div className='panel__wrapper'>
+        <h1 className="panel__main-title">Country Explorer</h1>
         <div className="panel">
             <div className="panel__column">
                 <ListOfCountries

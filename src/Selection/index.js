@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { withTranslation } from "react-i18next";
+import "./Selection.scss"
 
 /**
  * Selection
@@ -11,30 +12,31 @@ import { withTranslation } from "react-i18next";
 function Selection({ t, countryDetails }) {
     return (
         <>
-            <h1>Selection</h1>
-            {
-                countryDetails?.id ? (
-                    <>
-                        <p>
-                            <strong>{t('NAME')}:</strong>
-                            {countryDetails.name}
-                        </p>
-                        <p>
-                            <strong>{t('DIAL_CODE')}:</strong>
-                            {countryDetails.dialCode}
-                        </p>
-                        <p>
-                            <strong>{t('CONTINENT')}:</strong>
-                            {countryDetails.continent}
-                        </p>
-                        <p>
-                            <strong>{t('CURRENCY')}:</strong>
-                            {countryDetails.currencyCode}
-                        </p>
-                    </>
-                ) : <h3>{t('MUST_COUNTRY_SELECTION')}</h3>
-            }
-
+            <h2 className="panel__column__title">Selection</h2>
+            <div className="panel__content">
+                {
+                    countryDetails?.id ? (
+                        <>
+                            <p className="info__row">
+                                <span className="info__label">{t('NAME')}</span>
+                                {countryDetails.name}
+                            </p>
+                            <p className="info__row">
+                                <span className="info__label">{t('DIAL_CODE')}</span>
+                                {countryDetails.dialCode}
+                            </p>
+                            <p className="info__row">
+                                <span className="info__label">{t('CONTINENT')}</span>
+                                {countryDetails.continent}
+                            </p>
+                            <p className="info__row">
+                                <span className="info__label">{t('CURRENCY')}</span>
+                                {countryDetails.currencyCode}
+                            </p>
+                        </>
+                    ) : <p>{t('MUST_COUNTRY_SELECTION')}</p>
+                }
+            </div>
         </>
     );
 }

@@ -1,15 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import "./assets/colors";
 * {
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
 }
-
 
 .panel {
     display: flex;
     justify-content: space-between;
-
+    padding: 10px;
+    margin: 0 20px;
     
     &__column {
         width: 30%;
+        box-shadow: -4px 3px 10px -3px #899cbf;
+        border-radius: 5px;
+        padding: 10px;
+        max-height: 82vh;
+        overflow: hidden;
+
+        &__title {
+            color: #212529;
+            text-transform: capitalize;
+        }
+    }
+
+    &__content {
+        padding: 15px 0;
+        color: #212529;
+        max-height: 91%;
+        overflow: auto;
+    }
+
+    &__wrapper {
+        background-color: $gray;
+        max-height: 100vh;
+    }
+
+    &__main-title {
+        text-align: center;
+        padding: 20px 0;
     }
 }

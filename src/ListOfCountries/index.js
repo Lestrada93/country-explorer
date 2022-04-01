@@ -11,14 +11,16 @@ import Country from "../Country";
 function ListOfCountries({ countries, seeDetails }) {
     return (
         <>
-            <h1>List of Countries</h1>
-            {
-                countries.length ? (
-                    countries.map(country => {
-                        return <Country key={country.id} data={country} seeDetails={seeDetails} />
-                    })
-                ) : <h3>Loading</h3>
-            }
+            <h2 className="panel__column__title">List of Countries</h2>
+            <div className="panel__content">
+                {
+                    countries.length ? (
+                        countries.map(country => {
+                            return <Country key={country.id} data={country} seeDetails={seeDetails} />
+                        })
+                    ) : <h3>Loading</h3>
+                }
+            </div>
         </>
     );
 }
