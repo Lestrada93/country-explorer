@@ -13,7 +13,6 @@ function App() {
 
     async function fetchCountries() {
         const response = await apiConnection.fetchingCountries();
-        console.info("response >>", response);
         setCountries(response);
     }
 

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import Country from "../Country";
 
 function History({ seeDetails, countryDetails }) {
@@ -31,13 +32,20 @@ function History({ seeDetails, countryDetails }) {
         <div>
             <h1>History</h1>
             {
-                getList().map(country => {
-                    return <Country key={country.id} data={country} seeDetails={seeDetails} />
-                })
+                Object.values(countriesHistory).length ? (
+                    getList().map(country => {
+                        return <Country key={country.id} data={country} seeDetails={seeDetails} />
+                    })
+                ) : <h3>You must select at least one country to view history</h3>
             }
         </div>
-    )
-        ;
+    );
 }
+
+
+History.propTypes = {
+    countryDetails: PropTypes.object.isRequired,
+    seeDetails: PropTypes.func.isRequired,
+};
 
 export default History;

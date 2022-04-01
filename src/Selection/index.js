@@ -1,34 +1,40 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 
 function Selection({ countryDetails }) {
-    const [details, setDetails] = useState({});
-    useEffect(() => {
-        if (countryDetails?.id) {
-            setDetails(countryDetails);
-        }
-    }, [countryDetails])
 
     return (
-        <div>
+        <>
             <h1>Selection</h1>
-            <p>
-                <strong>Name:</strong>
-                {details.name}
-            </p>
-            <p>
-                <strong>Dial code:</strong>
-                {details.dialCode}
-            </p>
-            <p>
-                <strong>Continent:</strong>
-                {details.continent}
-            </p>
-            <p>
-                <strong>Currency code:</strong>
-                {details.currencyCode}
-            </p>
-        </div>
+            {
+                countryDetails?.id ? (
+                    <>
+                        <p>
+                            <strong>Name:</strong>
+                            {countryDetails.name}
+                        </p>
+                        <p>
+                            <strong>Dial code:</strong>
+                            {countryDetails.dialCode}
+                        </p>
+                        <p>
+                            <strong>Continent:</strong>
+                            {countryDetails.continent}
+                        </p>
+                        <p>
+                            <strong>Currency code:</strong>
+                            {countryDetails.currencyCode}
+                        </p>
+                    </>
+                ) : <h3>You must select a country to see de the dails</h3>
+            }
+
+        </>
     );
 }
+
+Selection.propTypes = {
+    countryDetails: PropTypes.object.isRequired,
+};
 
 export default Selection;

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./Country.scss";
 
 function Country({ data, seeDetails }) {
@@ -9,5 +10,10 @@ function Country({ data, seeDetails }) {
         {data?.counter}
     </button>;
 }
+
+Country.propTypes = {
+    data: PropTypes.object.isRequired,
+    seeDetails: PropTypes.func.isRequired,
+};
 
 export default Country;
