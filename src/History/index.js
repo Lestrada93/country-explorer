@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Country from "../Country";
 
 function History({ seeDetails, countryDetails }) {
     const [countriesHistory, setCountriesHistory] = useState({});
@@ -31,7 +32,7 @@ function History({ seeDetails, countryDetails }) {
             <h1>History</h1>
             {
                 getList().map(country => {
-                    return <button key={country.id} onClick={() => seeDetails(country.id)}>{country.name} {country.counter}</button>
+                    return <Country key={country.id} data={country} seeDetails={seeDetails} />
                 })
             }
         </div>

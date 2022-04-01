@@ -5,6 +5,8 @@ import History from './History';
 import ApiConnection from './Core/countries/ApiConnection';
 const apiConnection = new ApiConnection();
 
+import "./App.scss"
+
 function App() {
     const [countryDetails, setCountryDetails] = useState({});
     const [countries, setCountries] = useState([]);
@@ -25,11 +27,19 @@ function App() {
 
     return <div>
         <h1>Country Explorer</h1>
-        <ListOfCountries
-            countries={countries}
-            seeDetails={seeDetails} />
-        <Selection countryDetails={countryDetails} />
-        <History seeDetails={seeDetails} countryDetails={countryDetails} />
+        <div className="panel">
+            <div className="panel__column">
+                <ListOfCountries
+                    countries={countries}
+                    seeDetails={seeDetails} />
+            </div>
+            <div className="panel__column">
+                <Selection countryDetails={countryDetails} />
+            </div>
+            <div className="panel__column">
+                <History seeDetails={seeDetails} countryDetails={countryDetails} />
+            </div>
+        </div>
     </div>;
 }
 
