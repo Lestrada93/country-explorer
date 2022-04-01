@@ -14,21 +14,21 @@
     
     &__column {
         width: 30%;
-        box-shadow: -4px 3px 10px -3px #899cbf;
+        box-shadow: -4px 3px 10px -3px $shadow;
         border-radius: 5px;
         padding: 10px;
         max-height: 82vh;
         overflow: hidden;
 
         &__title {
-            color: #212529;
+            color: $text;
             text-transform: capitalize;
         }
     }
 
     &__content {
         padding: 15px 0;
-        color: #212529;
+        color: $text;
         max-height: 91%;
         overflow: auto;
     }
