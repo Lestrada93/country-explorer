@@ -2,6 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./Country.scss";
 
+/**
+ * Country
+ * @description It shows the country information
+ * @param {*} param0 
+ * @returns 
+ */
 function Country({ data, seeDetails }) {
     return <button
         className="country"

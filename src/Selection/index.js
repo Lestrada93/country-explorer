@@ -1,8 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+/**
+ * Selection
+ * @description It displays the detailed information
+ * @param {*} param0 
+ * @returns 
+ */
 function Selection({ countryDetails }) {
-
     return (
         <>
             <h1>Selection</h1>

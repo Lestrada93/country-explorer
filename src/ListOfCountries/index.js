@@ -2,8 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import Country from "../Country";
 
+/**
+ * ListOfCountries
+ * @description It displays the list of the countries in the left panel
+ * @param {*} param0 
+ * @returns 
+ */
 function ListOfCountries({ countries, seeDetails }) {
-
     return (
         <>
             <h1>List of Countries</h1>

@@ -2,6 +2,12 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import Country from "../Country";
 
+/**
+ * History
+ * @description It display the history of countries executing a click
+ * @param {*} param0 
+ * @returns 
+ */
 function History({ seeDetails, countryDetails }) {
     const [countriesHistory, setCountriesHistory] = useState({});
 
