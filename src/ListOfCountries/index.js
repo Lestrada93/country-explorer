@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { withTranslation } from "react-i18next";
 import Country from "../Country";
 
 /**
@@ -8,7 +9,7 @@ import Country from "../Country";
  * @param {*} param0 
  * @returns 
  */
-function ListOfCountries({ countries, seeDetails }) {
+function ListOfCountries({ t, countries, seeDetails }) {
     return (
         <>
             <h2 className="panel__column__title">List of Countries</h2>
@@ -18,7 +19,7 @@ function ListOfCountries({ countries, seeDetails }) {
                         countries.map(country => {
                             return <Country key={country.id} data={country} seeDetails={seeDetails} />
                         })
-                    ) : <h3>Loading</h3>
+                    ) : <h3>{t("LOADING")}</h3>
                 }
             </div>
         </>
@@ -26,8 +27,9 @@ function ListOfCountries({ countries, seeDetails }) {
 }
 
 ListOfCountries.propTypes = {
+    t: PropTypes.func,
     countries: PropTypes.array.isRequired,
     seeDetails: PropTypes.func.isRequired,
 };
 
-export default ListOfCountries;
+export default withTranslation()(ListOfCountries);

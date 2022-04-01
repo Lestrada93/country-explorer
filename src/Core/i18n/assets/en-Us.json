@@ -9,5 +9,6 @@
   "DIAL_CODE": "Dial code",
   "CONTINENT": "Continent",
   "CURRENCY": "Currency code",
-  "VIEWED": "Viewed"
+  "VIEWED": "Viewed",
+  "LOADING": "Loading..."
 }
