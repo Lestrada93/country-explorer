@@ -68,35 +68,43 @@
   "response": [
     {
       "name": "Afghanistan",
-      "id": "AF"
+      "id": "AF",
+      "flag": "🇦🇫"
     },
     {
       "name": "Åland Islands",
-      "id": "AX"
+      "id": "AX",
+      "flag": "🇦🇽"
     },
     {
       "name": "Albania",
-      "id": "AL"
+      "id": "AL",
+      "flag": "🇦🇱"
     },
     {
       "name": "Algeria",
-      "id": "DZ"
+      "id": "DZ",
+      "flag": "🇩🇿"
     },
     {
       "name": "American Samoa",
-      "id": "AS"
+      "id": "AS",
+      "flag": "🇦🇸"
     },
     {
       "name": "Andorra",
-      "id": "AD"
+      "id": "AD",
+      "flag": "🇦🇩"
     },
     {
       "name": "Angola",
-      "id": "AO"
+      "id": "AO",
+      "flag": "🇦🇴"
     },
     {
       "name": "Anguilla",
-      "id": "AI"
+      "id": "AI",
+      "flag": "🇦🇮"
     }
   ]
 }
