@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { withTranslation } from "react-i18next";
 
 /**
  * Selection
@@ -7,7 +8,7 @@ import PropTypes from "prop-types";
  * @param {*} param0 
  * @returns 
  */
-function Selection({ countryDetails }) {
+function Selection({ t, countryDetails }) {
     return (
         <>
             <h1>Selection</h1>
@@ -15,23 +16,23 @@ function Selection({ countryDetails }) {
                 countryDetails?.id ? (
                     <>
                         <p>
-                            <strong>Name:</strong>
+                            <strong>{t('NAME')}:</strong>
                             {countryDetails.name}
                         </p>
                         <p>
-                            <strong>Dial code:</strong>
+                            <strong>{t('DIAL_CODE')}:</strong>
                             {countryDetails.dialCode}
                         </p>
                         <p>
-                            <strong>Continent:</strong>
+                            <strong>{t('CONTINENT')}:</strong>
                             {countryDetails.continent}
                         </p>
                         <p>
-                            <strong>Currency code:</strong>
+                            <strong>{t('CURRENCY')}:</strong>
                             {countryDetails.currencyCode}
                         </p>
                     </>
-                ) : <h3>You must select a country to see de the dails</h3>
+                ) : <h3>{t('MUST_COUNTRY_SELECTION')}</h3>
             }
 
         </>
@@ -39,7 +40,8 @@ function Selection({ countryDetails }) {
 }
 
 Selection.propTypes = {
+    t: PropTypes.func,
     countryDetails: PropTypes.object.isRequired,
 };
 
-export default Selection;
+export default withTranslation()(Selection);

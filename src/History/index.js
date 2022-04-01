@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import Country from "../Country";
+import { withTranslation } from "react-i18next";
 
 /**
  * History
@@ -8,7 +9,7 @@ import Country from "../Country";
  * @param {*} param0 
  * @returns 
  */
-function History({ seeDetails, countryDetails }) {
+function History({ t, seeDetails, countryDetails }) {
     const [countriesHistory, setCountriesHistory] = useState({});
 
     useEffect(() => {
@@ -42,7 +43,7 @@ function History({ seeDetails, countryDetails }) {
                     getList().map(country => {
                         return <Country key={country.id} data={country} seeDetails={seeDetails} />
                     })
-                ) : <h3>You must select at least one country to view history</h3>
+                ) : <h3>{t('MUST_COUNTRY_HISTORY')}</h3>
             }
         </div>
     );
@@ -50,8 +51,9 @@ function History({ seeDetails, countryDetails }) {
 
 
 History.propTypes = {
+    t: PropTypes.func,
     countryDetails: PropTypes.object.isRequired,
     seeDetails: PropTypes.func.isRequired,
 };
 
-export default History;
+export default withTranslation()(History);

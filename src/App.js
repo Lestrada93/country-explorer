@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './Core/i18n';
 import ListOfCountries from './ListOfCountries';
 import Selection from './Selection';
 import History from './History';
