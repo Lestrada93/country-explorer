@@ -1,0 +1,14 @@
+.info {
+
+    &__row {
+        width: 100%;
+        padding: 10px 5px;
+        font-weight: bold;
+    }
+
+    &__label {
+        display: block;
+        font-weight: 400;
+        font-style: italic;
+    }
+}

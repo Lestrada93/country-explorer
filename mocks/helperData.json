@@ -1,0 +1,110 @@
+{
+  "apiResult": [
+    {
+      "name": "Afghanistan",
+      "flag": "🇦🇫",
+      "code": "AF",
+      "dialCode": "+93",
+      "continent": "Asia",
+      "currencyCode": "AFN"
+    },
+    {
+      "name": "Åland Islands",
+      "flag": "🇦🇽",
+      "code": "AX",
+      "dialCode": "+358",
+      "continent": "Europe",
+      "currencyCode": "EUR"
+    },
+    {
+      "name": "Albania",
+      "flag": "🇦🇱",
+      "code": "AL",
+      "dialCode": "+355",
+      "continent": "Europe",
+      "currencyCode": "ALL"
+    },
+    {
+      "name": "Algeria",
+      "flag": "🇩🇿",
+      "code": "DZ",
+      "dialCode": "+213",
+      "continent": "Africa",
+      "currencyCode": "DZD"
+    },
+    {
+      "name": "American Samoa",
+      "flag": "🇦🇸",
+      "code": "AS",
+      "dialCode": "+1684",
+      "continent": "Oceania",
+      "currencyCode": "USD"
+    },
+    {
+      "name": "Andorra",
+      "flag": "🇦🇩",
+      "code": "AD",
+      "dialCode": "+376",
+      "continent": "Europe",
+      "currencyCode": "EUR"
+    },
+    {
+      "name": "Angola",
+      "flag": "🇦🇴",
+      "code": "AO",
+      "dialCode": "+244",
+      "continent": "Africa",
+      "currencyCode": "AOA"
+    },
+    {
+      "name": "Anguilla",
+      "flag": "🇦🇮",
+      "code": "AI",
+      "dialCode": "+1264",
+      "continent": "North America",
+      "currencyCode": "XCD"
+    }
+  ],
+  "response": [
+    {
+      "name": "Afghanistan",
+      "id": "AF",
+      "flag": "🇦🇫"
+    },
+    {
+      "name": "Åland Islands",
+      "id": "AX",
+      "flag": "🇦🇽"
+    },
+    {
+      "name": "Albania",
+      "id": "AL",
+      "flag": "🇦🇱"
+    },
+    {
+      "name": "Algeria",
+      "id": "DZ",
+      "flag": "🇩🇿"
+    },
+    {
+      "name": "American Samoa",
+      "id": "AS",
+      "flag": "🇦🇸"
+    },
+    {
+      "name": "Andorra",
+      "id": "AD",
+      "flag": "🇦🇩"
+    },
+    {
+      "name": "Angola",
+      "id": "AO",
+      "flag": "🇦🇴"
+    },
+    {
+      "name": "Anguilla",
+      "id": "AI",
+      "flag": "🇦🇮"
+    }
+  ]
+}

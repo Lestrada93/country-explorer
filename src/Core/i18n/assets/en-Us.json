@@ -1,0 +1,14 @@
+{
+  "COUNTRY_EXPLORER": "Country explorer",
+  "LIST_OF_COUNTRIES": "List of countries",
+  "SELECTION": "Selection",
+  "HISTORY": "History",
+  "MUST_COUNTRY_SELECTION": "You must select a country to see de the dails",
+  "MUST_COUNTRY_HISTORY": "You must select at least one country to view history",
+  "NAME": "Name",
+  "DIAL_CODE": "Dial code",
+  "CONTINENT": "Continent",
+  "CURRENCY": "Currency code",
+  "VIEWED": "Viewed",
+  "LOADING": "Loading..."
+}
