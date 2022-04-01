@@ -43,3 +43,14 @@
         padding: 20px 0;
     }
 }
+
+
+@media (max-width: 720px) {
+    .panel {
+        flex-direction: column;
+
+        &__column {
+            width: 100%;
+        }
+    }
+}
