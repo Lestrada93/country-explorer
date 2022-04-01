@@ -8,5 +8,6 @@
   "NAME": "Name",
   "DIAL_CODE": "Dial code",
   "CONTINENT": "Continent",
-  "CURRENCY": "Currency code"
+  "CURRENCY": "Currency code",
+  "VIEWED": "Viewed"
 }

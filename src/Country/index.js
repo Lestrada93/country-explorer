@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { withTranslation } from "react-i18next";
 import "./Country.scss";
 
 /**
@@ -8,18 +9,23 @@ import "./Country.scss";
  * @param {*} param0 
  * @returns 
  */
-function Country({ data, seeDetails }) {
+function Country({ t, data, seeDetails }) {
     return <button
         className="country"
         onClick={() => seeDetails(data.id)}>
-        {data.name}
-        {data?.counter}
+        {data?.flag}
+        <span className="country__name">{data.name}</span>
+        {
+            data?.counter &&
+            <span>{t("VIEWED")}: {data?.counter}</span>
+        }
     </button>;
 }
 
 Country.propTypes = {
+    t: PropTypes.func,
     data: PropTypes.object.isRequired,
     seeDetails: PropTypes.func.isRequired,
 };
 
-export default Country;
+export default withTranslation()(Country);

@@ -24,6 +24,7 @@ function History({ t, seeDetails, countryDetails }) {
                     id: countryDetails.id,
                     counter: 1,
                     name: countryDetails.name,
+                    flag: countryDetails.flag,
                 }
             }
 

@@ -5,6 +5,10 @@ exports[`Country component Snapshot 1`] = `
   className="country"
   onClick={[Function]}
 >
-  test
+  <span
+    className="country__name"
+  >
+    test
+  </span>
 </button>
 `;
